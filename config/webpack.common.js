@@ -41,7 +41,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Marionette Contact-Manager',
       favicon: paths.src + '/images/favicon.png',
-      template: paths.src + '/template.hbs', // template file
+      template: paths.src + '/template.html', // template file
       filename: 'index.html', // output file
     }),
 

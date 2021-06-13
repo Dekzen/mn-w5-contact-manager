@@ -1,13 +1,12 @@
 import { View } from 'backbone.marionette'
-import contact from '../templates/contact.hbs'
+import ContactView from './contact'
+import contacts from '../templates/contacts.hbs'
 
 export default View.extend({
-  tagName: 'li',
-  className: 'media col-md-6 col-lg-4',
-  template: contact,
-
+  template: contacts,
+  itemView: ContactView,
+  itemViewContainer: '.contacts-container',
   triggers: {
-    'click .delete-contact': 'delete:clicked',
-    'click .edit-contact': 'edit:clicked',
+    'click .add-contact-btn': 'addContact:clicked',
   },
 })
