@@ -31,6 +31,10 @@ module.exports = merge(common, {
           'sass-loader',
         ],
       },
+      {
+        test: /\.hbs$/,
+        use: ['handlebars-loader'],
+      },
     ],
   },
   plugins: [
