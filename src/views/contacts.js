@@ -1,11 +1,11 @@
-import { View } from 'backbone.marionette'
+import { CollectionView } from 'backbone.marionette'
 import ContactView from './contact'
 import contacts from '../templates/contacts.hbs'
 
-export default View.extend({
+export default CollectionView.extend({
   template: contacts,
-  itemView: ContactView,
-  itemViewContainer: '.contacts-container',
+  childView: ContactView,
+  childViewContainer: '.contacts-container',
   triggers: {
     'click .add-contact-btn': 'addContact:clicked',
   },
